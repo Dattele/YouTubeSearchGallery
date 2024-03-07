@@ -5,7 +5,7 @@ const video = document.querySelector('#popup > iframe');
 const videoIdInput = document.getElementById('videoId');
 const IDS_KEY = 'youTubeVideoIds';
 const BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
-const API_KEY = '';
+const API_KEY = ''; // The API Key is stored in my .env file, which is required for using the YouTube API
 let youTubeVideoIds = [];
 
 // Asynchronous function to fetch YouTube videos
