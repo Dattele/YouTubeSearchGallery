@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Youtube Resource Gallery</title>
+    <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1 class="headline">Youtube Resource Gallery</h1>
+                <p>An app for keeping track of valuable resources while learning to code. When you
+                    come across a helpful video, add the id here.
+                </p>
+            </div>
+            <form>
+                <label for="videoId">Video Id</label>
+                <input type="text" name="videoId" id="videoId" placeholder="DF9&DFF6">
+                <button onclick="saveVideo(event)">Save Video</button>
+            </form>
+            <div class="search-container">
+                <input type="text" id="youtubeSearchInput" placeholder="Search YouTube videos">
+                <button id="youtubeSearchBtn">Search</button>
+                <button id="clearSearchBtn">Clear</button>
+            </div>
+        </div>
+        <div id="searchResultsContainer"></div>
+        <ul id="videosContainer">
+
+        </ul>
+    </div>
+    <div id="popup" onclick="handlePopupClick()" class="closed">
+        <iframe width="560" height="315"
+        frame-border="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

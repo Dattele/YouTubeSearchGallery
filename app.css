@@ -1,0 +1,200 @@
+:root {
+    --background: #1a1a2e;
+    --headline: #e94560;
+    --copy: #e1e1e1;
+    --accent: #0f3460;
+    --accent-text: #ffffff;
+    --font-size-base: 18px;
+    --font-size-large: 20px;
+    --padding-container: 20px;
+    --padding-button: 20px; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    color: var(--copy);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--padding-container);
+}
+
+p, label {
+    font-size: var(--font-size-base);
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+h1.headline {
+    color: var(--headline);
+    font-size: clamp(2rem, 8vw, 54px);
+    margin-bottom: 2px;
+}
+
+@media only screen and (max-width:800px) {
+    .header {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: var(--padding-container);
+    }
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, form > button {
+    padding: var(--padding-button);
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    font-size: var(--font-size-large);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input:focus, form > button:hover {
+    background-color: var(--accent);
+    color: var(--accent-text);
+    transform: translateY(-2px);
+}
+
+#videosContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Controls size of the thumbnails */
+    gap: 10px;
+    padding-left: 0;
+    margin-top: 60px;
+}
+
+#videosContainer > li {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    display: flex; 
+    margin: 5px;
+}
+
+#videosContainer > li:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail {
+    border-radius: 10px;
+    width: 100%; /* Thumbnail fills its container */
+    cursor: pointer;
+    transition: transform 250ms;
+    display: block; /* Thumbnail fills the li, removes bottom margin/gap */
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.delete-btn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    border: none;
+    border-radius: 100%;
+    font-size: var(--font-size-large);
+    cursor: pointer;
+    background-color: var(--accent);
+    color: var(--accent-text);
+    padding: 10px;
+}
+
+#popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 20, 20, 0.95);
+    padding: 30px;
+    transition: transform 300ms, opacity 300ms;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+}
+
+#popup.closed {
+    transform: translateY(-100vh);
+    opacity: 0;
+}
+
+#popup.open {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#youtubeSearchInput {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#youtubeSearchBtn {
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: var(--accent-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#youtubeSearchBtn:hover {
+    background-color: darken(var(--accent), 10%);
+}
+
+#clearSearchBtn {
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: var(--accent-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#clearSearchBtn:hover {
+    background-color: darken(var(--accent), 10%);
+}
