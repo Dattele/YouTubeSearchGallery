@@ -5,7 +5,7 @@ const video = document.querySelector('#popup > iframe');
 const videoIdInput = document.getElementById('videoId');
 const IDS_KEY = 'youTubeVideoIds';
 const BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
-const API_KEY = 'AIzaSyCtieEKe1zJRgMOMye57Ri6nx2MED5zPqI';
+const API_KEY = '';
 let youTubeVideoIds = [];
 
 // Asynchronous function to fetch YouTube videos
