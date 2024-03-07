@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root {
     --background: #1a1a2e;
     --headline: #e94560;
@@ -9,8 +11,6 @@
     --padding-container: 20px;
     --padding-button: 20px; 
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
