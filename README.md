@@ -21,8 +21,10 @@ YouTube Search Gallery is an interactive web application that allows users to cr
 To get started with the YouTube Search Gallery:
 
 1. Clone the repository: https://github.com/Dattele/YouTubeSearchGallery.git
-2. Navigate to the `frontend` folder.
-3. Open `index.html` in your browser to run the application.
+2. Navigate to the project directory.
+3. Run the command `npm install` to install all necessary dependencies.
+4. Open `index.html` in your browser to run the application.
+5. Will need access to a YouTube Data API v3 Key for the search bar.
 
 ## Acknowledgments
 
